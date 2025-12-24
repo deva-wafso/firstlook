@@ -22,10 +22,10 @@ export const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center gap-3 cursor-pointer" onClick={handleRedirect}>
+          <div className="flex-shrink-0 flex items-center gap-2 sm:gap-3 cursor-pointer" onClick={handleRedirect}>
             {/* Custom SVG Logo based on the provided image */}
-            <div className="w-12 h-12 relative flex items-center justify-center">
-               <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 relative flex items-center justify-center">
+                <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
                   {/* Outer Circles */}
                   <path d="M85 50 A 35 35 0 0 1 15 50" stroke="#66C2BD" strokeWidth="2" strokeLinecap="round" />
                   <path d="M15 50 A 35 35 0 0 0 85 50" stroke="#935FA7" strokeWidth="2" strokeLinecap="round" opacity="0.5" />
@@ -39,14 +39,14 @@ export const Navbar: React.FC = () => {
                   <circle cx="45" cy="55" r="3" fill="#66C2BD" />
                   <circle cx="48" cy="65" r="2.5" fill="#66C2BD" />
                   <circle cx="50" cy="75" r="2" fill="#66C2BD" />
-               </svg>
+                </svg>
             </div>
             <div className="flex flex-col justify-center -space-y-1">
               <div className="flex items-baseline">
-                <span className="text-2xl font-bold text-slate-900 tracking-tight">new</span>
-                <span className="text-2xl font-serif italic font-bold text-brand-green ml-0.5">life</span>
+                <span className="text-lg sm:text-2xl font-bold text-slate-900 tracking-tight">new</span>
+                <span className="text-lg sm:text-2xl font-serif italic font-bold text-brand-green ml-0.5">life</span>
               </div>
-              <p className="text-[10px] text-slate-500 font-medium tracking-[0.2em] uppercase pl-0.5">Physio</p>
+              <p className="text-[8px] sm:text-[10px] text-slate-500 font-medium tracking-[0.2em] uppercase pl-0.5">Physio</p>
             </div>
           </div>
 
@@ -70,8 +70,14 @@ export const Navbar: React.FC = () => {
             </a>
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden flex items-center">
+          {/* Mobile menu button and CTA */}
+          <div className="md:hidden flex items-center gap-3">
+            <a
+              href="https://www.google.com/"
+              className="bg-medical-600 hover:bg-medical-700 text-white text-[10px] sm:text-xs font-bold py-2 px-3 rounded-lg shadow-sm transition-all active:scale-95 whitespace-nowrap"
+            >
+              Book Appointment
+            </a>
             <button
               onClick={toggleMenu}
               className="text-slate-600 hover:text-medical-600 p-2 focus:outline-none"
